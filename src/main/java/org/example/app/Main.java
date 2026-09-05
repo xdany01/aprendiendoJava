@@ -1,6 +1,5 @@
 package org.example.app;
 
-
 import org.example.app.practicas.practica01.Practica01;
 import org.example.app.practicas.practica02.Practica02;
 import org.example.app.practicas.practica03.Practica03;

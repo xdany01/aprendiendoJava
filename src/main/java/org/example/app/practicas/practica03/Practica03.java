@@ -58,5 +58,42 @@ public class Practica03 {
         int lastIndexCharO = str1.lastIndexOf("o");
         IO.println("str1.lastIndexOf(\"o\") -> " + lastIndexCharO);
 
+        String strReplace = str1.replace("World", "Everyone");
+        IO.println("str1.replace(\"World\", \"Everyone\") -> " + strReplace);
+
+        String hello = "Hola";
+        String world = "Mundo";
+        String sayHello = hello.concat(" ").concat(world);
+        IO.println("uso de concat -> " + sayHello);
+
+        StringBuilder builder = new StringBuilder();
+        builder.append(hello);
+        builder.append(" ");
+        builder.append(world);
+        IO.println("uso de StringBuilder -> " + builder.toString());
+
+        StringBuffer stringBuffer = new StringBuffer();
+        stringBuffer.append(hello);
+        stringBuffer.append(" ");
+        stringBuffer.append(world);
+        IO.println("uso de StringBuffer -> " + stringBuffer.toString());
+
+        String strJoin = String.join(" ", hello, world);
+        IO.println("String.join(\" \", hello, world) -> " + strJoin);
+
+        String name = "Daniel Nunez";
+        String company = "Compania Acme";
+        String domain = "com.ar";
+
+        String emailPart1 = processEmailString(name, ".");
+        String emailPart2 = processEmailString(company, "");
+        String emailComplete = emailPart1 + "@" + emailPart2 + "." + domain;
+
+        IO.println("Process email -> " + emailComplete);
+
+    }
+
+    private String processEmailString(String str, String repl) {
+        return str.trim().toLowerCase().replace(" ", repl);
     }
 }
