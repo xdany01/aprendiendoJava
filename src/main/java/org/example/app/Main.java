@@ -4,13 +4,15 @@ import org.example.app.practicas.practica01.Practica01;
 import org.example.app.practicas.practica02.Practica02;
 import org.example.app.practicas.practica03.Practica03;
 import org.example.app.practicas.practica04.Practica04;
+import org.example.app.practicas.practica05.Practica05;
 
 public class Main {
     static void main() {
 //        testPractica01();
 //        testPractica02();
 //        testPractica03();
-        testPractica04();
+//        testPractica04();
+        testPractica05();
     }
 
     static void testPractica01() {
@@ -32,5 +34,10 @@ public class Main {
         Practica04 p = new Practica04();
 //        p.useScanner();
         p.useScanner2();
+    }
+
+    static void testPractica05() {
+        Practica05 p = new Practica05();
+        p.processRecipe();
     }
 }
