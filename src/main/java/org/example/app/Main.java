@@ -5,6 +5,7 @@ import org.example.app.practicas.practica02.Practica02;
 import org.example.app.practicas.practica03.Practica03;
 import org.example.app.practicas.practica04.Practica04;
 import org.example.app.practicas.practica05.Practica05;
+import org.example.app.practicas.practica06.Practica06;
 
 public class Main {
     static void main() {
@@ -12,7 +13,8 @@ public class Main {
 //        testPractica02();
 //        testPractica03();
 //        testPractica04();
-        testPractica05();
+//        testPractica05();
+        testPractica06();
     }
 
     static void testPractica01() {
@@ -39,5 +41,10 @@ public class Main {
     static void testPractica05() {
         Practica05 p = new Practica05();
         p.processRecipe();
+    }
+
+    static void testPractica06() {
+        Practica06 p = new Practica06();
+        p.stringFormat();
     }
 }
