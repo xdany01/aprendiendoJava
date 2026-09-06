@@ -27,11 +27,29 @@ public class Practica05 {
 
         while (true) {
             String ingredient = sc.nextLine();
-            if (ingredient.equalsIgnoreCase("q")) {
-                break;
+            boolean isKeyExit = ingredient.equalsIgnoreCase("q");
+
+            if (isKeyExit) {
+                if (ingredients.isEmpty()) {
+                    IO.println("Debe ingresar como minimo un ingrediente");
+                } else {
+                    break;
+                }
             }
-            ingredients.add(ingredient);
-            IO.println("Ingredientes cargados: " + ingredients);
+
+            boolean isValidWord = ingredient.trim().isEmpty();
+
+            if (!isValidWord) {
+                if (!isKeyExit) {
+                    ingredients.add(ingredient);
+                }
+            } else {
+                IO.println("No se puede ingresar una cadena vacia como ingrediente");
+            }
+
+            if (!ingredients.isEmpty()) {
+                IO.println("Ingredientes cargados: " + ingredients);
+            }
         }
         return ingredients;
     }
