@@ -52,6 +52,6 @@ public class Main {
 
     static void testPractica07() {
         Practica07 p = new Practica07();
-        p.generadoID();
+        p.generatorID();
     }
 }
