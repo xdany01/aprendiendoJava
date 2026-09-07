@@ -1,6 +1,6 @@
 package org.example.app.practicas.practica03;
 
-import org.example.app.helpful.Helpful;
+import org.example.app.helpful.ArrayHelpful;
 
 public class Practica03 {
     public void useString() {
@@ -31,7 +31,7 @@ public class Practica03 {
         IO.println();
 
         IO.println("Algunos metodos de la clase Strings");
-        Helpful.printStringAsArray(str1);
+        ArrayHelpful.printStringAsArray(str1);
 
         String strLowerCase = str1.toLowerCase();
         IO.println("str1.toLowerCase() -> " + strLowerCase);
