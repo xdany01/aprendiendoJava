@@ -6,6 +6,7 @@ import org.example.app.practicas.practica03.Practica03;
 import org.example.app.practicas.practica04.Practica04;
 import org.example.app.practicas.practica05.Practica05;
 import org.example.app.practicas.practica06.Practica06;
+import org.example.app.practicas.practica07.Practica07;
 
 public class Main {
     static void main() {
@@ -14,7 +15,8 @@ public class Main {
 //        testPractica03();
 //        testPractica04();
 //        testPractica05();
-        testPractica06();
+//        testPractica06();
+        testPractica07();
     }
 
     static void testPractica01() {
@@ -46,5 +48,10 @@ public class Main {
     static void testPractica06() {
         Practica06 p = new Practica06();
         p.stringFormat();
+    }
+
+    static void testPractica07() {
+        Practica07 p = new Practica07();
+        p.generadoID();
     }
 }

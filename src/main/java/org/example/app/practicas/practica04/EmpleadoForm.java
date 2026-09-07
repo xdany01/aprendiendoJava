@@ -1,6 +1,6 @@
 package org.example.app.practicas.practica04;
 
-import org.example.app.helpful.ScannerImputHelpful;
+import org.example.app.helpful.ScannerInputHelpful;
 
 import java.util.Scanner;
 
@@ -12,9 +12,9 @@ public class EmpleadoForm {
         IO.print("Nombre: ");
         String nombre = input.nextLine();
 
-        ScannerImputHelpful imputHelpful = new ScannerImputHelpful(input);
+        ScannerInputHelpful inputHelpful = new ScannerInputHelpful(input);
 
-        Integer edad = imputHelpful.solicitarValor(
+        Integer edad = inputHelpful.solicitarValor(
                 "Edad: ",
                 Scanner::nextInt,
                 e -> e >= 18 && e <= 100,
@@ -26,7 +26,7 @@ public class EmpleadoForm {
             return;
         }
 
-        Double salary = imputHelpful.solicitarValor(
+        Double salary = inputHelpful.solicitarValor(
                 "Salario: ",
                 Scanner::nextDouble,
                 s -> s > 0,
@@ -38,7 +38,7 @@ public class EmpleadoForm {
             return;
         }
 
-        Boolean isBoss = imputHelpful.solicitarValor(
+        Boolean isBoss = inputHelpful.solicitarValor(
                 "Es Jefe: ",
                 Scanner::nextBoolean,
                 b -> true, // no hay regla de negocio, cualquier boolean vale

@@ -5,21 +5,21 @@ import java.util.Scanner;
 import java.util.function.Function;
 import java.util.function.Predicate;
 
-public class ScannerImputHelpful {
+public class ScannerInputHelpful {
     Scanner input;
     int maxIntentos;
 
-    public ScannerImputHelpful() {
+    public ScannerInputHelpful() {
         this.input = new Scanner(System.in);
         this.maxIntentos = 3;
     }
 
-    public ScannerImputHelpful(Scanner input) {
+    public ScannerInputHelpful(Scanner input) {
         this.input = input;
         this.maxIntentos = 3;
     }
 
-    public ScannerImputHelpful(Scanner input, int maxIntentos) {
+    public ScannerInputHelpful(Scanner input, int maxIntentos) {
         this.input = input;
         this.maxIntentos = maxIntentos;
     }
