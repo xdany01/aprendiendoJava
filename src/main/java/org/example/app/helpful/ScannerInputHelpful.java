@@ -43,7 +43,11 @@ public class ScannerInputHelpful {
             IO.print(prompt);
             try {
                 T valor = reader.apply(this.input);
-                this.input.nextLine(); // Limpiar buffer
+
+                Class<?> clazz = valor.getClass();
+                if (clazz != String.class) {
+                    this.input.nextLine(); // Limpiar buffer
+                }
 
                 if (validador.test(valor)) {
                     return valor;
