@@ -7,6 +7,15 @@ import org.example.app.practicas.practica04.Practica04;
 import org.example.app.practicas.practica05.Practica05;
 import org.example.app.practicas.practica06.Practica06;
 import org.example.app.practicas.practica07.Practica07;
+import org.example.app.practicas.practica08.presentation.Login;
+import org.example.app.practicas.practica08.presentation.LoginTUI;
+import org.example.app.practicas.practica08.repository.IUserRepository;
+import org.example.app.practicas.practica08.repository.JsonUserRepository;
+import org.example.app.practicas.practica08.service.AuthService;
+import org.example.app.practicas.practica08.service.IAuthService;
+
+import java.io.IOException;
+import java.nio.file.Path;
 
 public class Main {
     static void main() {
@@ -16,7 +25,8 @@ public class Main {
 //        testPractica04();
 //        testPractica05();
 //        testPractica06();
-        testPractica07();
+//        testPractica07();
+        testPractica08();
     }
 
     static void testPractica01() {
@@ -53,5 +63,20 @@ public class Main {
     static void testPractica07() {
         Practica07 p = new Practica07();
         p.generatorID();
+    }
+
+    static void testPractica08() {
+//        Path file = Path.of(System.getProperty("user.dir"), "practica08-users.json");
+//        IUserRepository userRepository = new JsonUserRepository(file);
+        IUserRepository userRepository = new JsonUserRepository(); // path por defecto temp del sistema
+        IAuthService authService = new AuthService(userRepository);
+//        LoginTUI loginTUI = new LoginTUI(authService);
+//        try {
+//            loginTUI.run();
+//        } catch (IOException e) {
+//            throw new RuntimeException(e);
+//        }
+        Login login = new Login(authService);
+        login.run();
     }
 }
