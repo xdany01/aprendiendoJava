@@ -13,9 +13,6 @@ import org.example.app.practicas.practica08.repository.JsonUserRepository;
 import org.example.app.practicas.practica08.service.AuthService;
 import org.example.app.practicas.practica08.service.IAuthService;
 
-import java.io.IOException;
-import java.nio.file.Path;
-
 public class Main {
     static void main() {
 //        testPractica01();
