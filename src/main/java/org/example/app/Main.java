@@ -12,6 +12,9 @@ import org.example.app.practicas.practica08.repository.IUserRepository;
 import org.example.app.practicas.practica08.repository.JsonUserRepository;
 import org.example.app.practicas.practica08.service.AuthService;
 import org.example.app.practicas.practica08.service.IAuthService;
+import org.example.app.practicas.practica09.Practica09;
+
+import java.net.URISyntaxException;
 
 public class Main {
     static void main() {
@@ -22,7 +25,8 @@ public class Main {
 //        testPractica05();
 //        testPractica06();
 //        testPractica07();
-        testPractica08();
+//        testPractica08();
+        testPractica09();
     }
 
     static void testPractica01() {
@@ -68,5 +72,19 @@ public class Main {
         IAuthService authService = new AuthService(userRepository);
         Login login = new Login(authService);
         login.run();
+    }
+
+    static void testPractica09() {
+        Practica09 p = new Practica09();
+        p.showRootPath();
+        p.showUserHomePath();
+        p.showTempPath();
+
+        try {
+            p.showExecutionPath();
+            p.showJarPath();
+        } catch (URISyntaxException e) {
+            throw new RuntimeException(e);
+        }
     }
 }

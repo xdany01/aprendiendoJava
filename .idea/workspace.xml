@@ -10,10 +10,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c92a287b-6af3-4df7-a388-35147d1c7d55" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/aprendiendoJava_jar.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/artifacts/aprendiendoJava_jar.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/app/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/app/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/app/helpful/MenuSelector.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/org/example/app/helpful/MenuSelector.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +61,7 @@
     "kotlin-language-version-configured": "true",
     "nodejs_package_manager_path": "npm",
     "onboarding.tips.debug.path": "C:/Users/Daniel/IdeaProjects/aprendiendoJava/src/main/java/org/example/Main.java",
-    "project.structure.last.edited": "Artifacts",
+    "project.structure.last.edited": "Modules",
     "project.structure.proportion": "0.15",
     "project.structure.side.proportion": "0.33670652",
     "settings.editor.selected.configurable": "terminal"
