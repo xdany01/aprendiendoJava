@@ -13,6 +13,7 @@ import org.example.app.practicas.practica08.repository.JsonUserRepository;
 import org.example.app.practicas.practica08.service.AuthService;
 import org.example.app.practicas.practica08.service.IAuthService;
 import org.example.app.practicas.practica09.Practica09;
+import org.example.app.practicas.practica10.Practica10;
 
 import java.net.URISyntaxException;
 
@@ -26,7 +27,8 @@ public class Main {
 //        testPractica06();
 //        testPractica07();
 //        testPractica08();
-        testPractica09();
+//        testPractica09();
+        testPractica10();
     }
 
     static void testPractica01() {
@@ -86,5 +88,31 @@ public class Main {
         } catch (URISyntaxException e) {
             throw new RuntimeException(e);
         }
+    }
+
+    static void testPractica10() {
+        Practica10 p = new Practica10();
+        p.printTriangle();
+        System.out.println();
+        p.printTriangleInverse();
+        System.out.println();
+        p.printTriangleEquilateral();
+        System.out.println();
+        p.printTriangleEquilateralInverse();
+        System.out.println();
+        p.printTriangleRight();
+        System.out.println();
+        p.printTriangleLeft();
+        System.out.println();
+        p.printTriangleEmpty();
+        System.out.println();
+        p.printRectangle();
+        System.out.println();
+        p.printDiamond();
+        System.out.println();
+        p.printCross();
+        System.out.println();
+        p.printHeart();
+        System.out.println();
     }
 }
