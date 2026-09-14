@@ -78,7 +78,7 @@ public class Logger {
      * @param color   código ANSI de color a aplicar a la etiqueta
      * @param message mensaje del log
      */
-    private static void log(String label, String color, String message) {
+    public static void log(String label, String color, String message) {
         String tag = "[" + label + "]";
         int padding = Math.max(0, LABEL_WIDTH + 2 - tag.length());
 

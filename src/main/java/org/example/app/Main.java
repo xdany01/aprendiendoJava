@@ -14,6 +14,7 @@ import org.example.app.practicas.practica08.service.AuthService;
 import org.example.app.practicas.practica08.service.IAuthService;
 import org.example.app.practicas.practica09.Practica09;
 import org.example.app.practicas.practica10.Practica10;
+import org.example.app.practicas.practica11.Practica11;
 
 import java.net.URISyntaxException;
 
@@ -28,7 +29,8 @@ public class Main {
 //        testPractica07();
 //        testPractica08();
 //        testPractica09();
-        testPractica10();
+//        testPractica10();
+        testPractica11();
     }
 
     static void testPractica01() {
@@ -113,6 +115,12 @@ public class Main {
         p.printCross();
         System.out.println();
         p.printHeart();
+        System.out.println();
+    }
+
+    static void testPractica11() {
+        Practica11 p = new Practica11();
+        p.toAverageGrades();
         System.out.println();
     }
 }
