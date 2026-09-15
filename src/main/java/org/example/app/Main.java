@@ -1,5 +1,6 @@
 package org.example.app;
 
+import org.example.app.helpful.ArrayHelpful;
 import org.example.app.practicas.practica01.Practica01;
 import org.example.app.practicas.practica02.Practica02;
 import org.example.app.practicas.practica03.Practica03;
@@ -15,8 +16,10 @@ import org.example.app.practicas.practica08.service.IAuthService;
 import org.example.app.practicas.practica09.Practica09;
 import org.example.app.practicas.practica10.Practica10;
 import org.example.app.practicas.practica11.Practica11;
+import org.example.app.practicas.practica12.Practica12;
 
 import java.net.URISyntaxException;
+import java.util.Arrays;
 
 public class Main {
     static void main() {
@@ -30,7 +33,8 @@ public class Main {
 //        testPractica08();
 //        testPractica09();
 //        testPractica10();
-        testPractica11();
+//        testPractica11();
+        testPractica12();
     }
 
     static void testPractica01() {
@@ -123,4 +127,29 @@ public class Main {
         p.toAverageGrades();
         System.out.println();
     }
+
+    static void testPractica12() {
+        Practica12 p = new Practica12();
+        int[] primitivos = new int[]{4, 7, 8, 25, 12, 15, 80, 99, 32, 45, 1};
+
+        System.out.println(Arrays.toString(primitivos));
+
+//        Integer[] wrappers = Arrays.stream(primitivos)
+//                .boxed()
+//                .toArray(Integer[]::new);
+
+//        ArrayHelpful.printStringAsArray(ArrayHelpful.arrayToString(wrappers));
+
+        int[] mergeSortPrimitivos = p.mergeSort(primitivos);
+
+        System.out.println(Arrays.toString(mergeSortPrimitivos));
+
+//        Integer[] mergeSortWrappers = Arrays.stream(mergeSortPrimitivos)
+//                .boxed()
+//                .toArray(Integer[]::new);
+
+//        ArrayHelpful.printStringAsArray(ArrayHelpful.arrayToString(mergeSortWrappers));
+    }
+
+
 }

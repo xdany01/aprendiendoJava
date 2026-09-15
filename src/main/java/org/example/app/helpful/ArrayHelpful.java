@@ -96,4 +96,23 @@ public class ArrayHelpful {
 
         IO.println(ColorsCode.RESET);
     }
+
+    public static <T> String arrayToString(T[] arr) {
+        StringBuilder sb = new StringBuilder();
+        for (T item : arr) {
+            sb.append(item);
+        }
+        return sb.toString();
+    }
+
+    public static <T> String arrayToString(T[] arr, String separator) {
+        StringBuilder sb = new StringBuilder();
+        for (int i = 0; i < arr.length; i++) {
+            sb.append(arr[i]);
+            if (i < arr.length - 1) {
+                sb.append(separator);
+            }
+        }
+        return sb.toString();
+    }
 }
