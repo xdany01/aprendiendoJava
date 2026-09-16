@@ -4,14 +4,28 @@ import org.example.app.helpful.ArrayHelpful;
 import org.example.app.helpful.Logger;
 
 import java.util.Arrays;
+import java.util.Scanner;
 
 public class Practica13 {
     public void showMatriz() {
 
-        var matriz = new int[][]{
-                {1, 2, 3},
-                {4, 5, 6}
-        };
+        IO.println("Ingrese la cantidad de filas de la matriz");
+        Scanner sc = new Scanner(System.in);
+        int rows = sc.nextInt();
+
+        IO.println("Ingrese la cantidad de columnas de filas");
+        int cols = sc.nextInt();
+
+        var matriz = new int[rows][cols];
+
+        for (int i = 0; i < rows; i++) {
+            for (int j = 0; j < cols; j++) {
+                IO.print("[" + i + "," + j + "] = ");
+                matriz[i][j] = sc.nextInt();
+                IO.println("");
+            }
+        }
+
         Logger.title("Recorriendo Matriz con un for tradicional");
 
         for (var i = 0; i < matriz.length; i++) {
