@@ -17,6 +17,7 @@ import org.example.app.practicas.practica09.Practica09;
 import org.example.app.practicas.practica10.Practica10;
 import org.example.app.practicas.practica11.Practica11;
 import org.example.app.practicas.practica12.Practica12;
+import org.example.app.practicas.practica13.Practica13;
 
 import java.net.URISyntaxException;
 import java.util.Arrays;
@@ -34,7 +35,8 @@ public class Main {
 //        testPractica09();
 //        testPractica10();
 //        testPractica11();
-        testPractica12();
+//        testPractica12();
+        testPractica13();
     }
 
     static void testPractica01() {
@@ -134,5 +136,11 @@ public class Main {
         System.out.println(Arrays.toString(primitivos));
         int[] mergeSortPrimitivos = p.mergeSort(primitivos);
         System.out.println(Arrays.toString(mergeSortPrimitivos));
+    }
+
+    static void testPractica13() {
+        Practica13 p = new Practica13();
+        p.showMatriz();
+        System.out.println();
     }
 }
