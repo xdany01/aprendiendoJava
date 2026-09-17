@@ -1,6 +1,5 @@
 package org.example.app;
 
-import org.example.app.helpful.ArrayHelpful;
 import org.example.app.practicas.practica01.Practica01;
 import org.example.app.practicas.practica02.Practica02;
 import org.example.app.practicas.practica03.Practica03;
@@ -18,6 +17,7 @@ import org.example.app.practicas.practica10.Practica10;
 import org.example.app.practicas.practica11.Practica11;
 import org.example.app.practicas.practica12.Practica12;
 import org.example.app.practicas.practica13.Practica13;
+import org.example.app.practicas.practica14.Practica14;
 
 import java.net.URISyntaxException;
 import java.util.Arrays;
@@ -36,7 +36,8 @@ public class Main {
 //        testPractica10();
 //        testPractica11();
 //        testPractica12();
-        testPractica13();
+//        testPractica13();
+        testPractica14();
     }
 
     static void testPractica01() {
@@ -142,5 +143,27 @@ public class Main {
         Practica13 p = new Practica13();
         p.showMatriz();
         System.out.println();
+    }
+
+    static void testPractica14() {
+        Practica14 p = new Practica14();
+
+        double[][] matrizA = new double[][]{
+                {1, 2},
+                {5, 6},
+        };
+        IO.println("Matriz A:");
+        Arrays.stream(matrizA).forEach(m -> IO.println(Arrays.toString(m)));
+
+        double[][] matrizB = new double[][]{
+                {3, 2},
+                {8, 1},
+        };
+        IO.println("Matriz B:");
+        Arrays.stream(matrizB).forEach(m -> IO.println(Arrays.toString(m)));
+
+        double[][] result = p.add(matrizA, matrizB);
+        IO.println("Suma:");
+        Arrays.stream(result).forEach(r -> IO.println(Arrays.toString(r)));
     }
 }

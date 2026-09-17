@@ -3,7 +3,7 @@ package org.example.app.practicas.practica14;
 import org.example.app.helpful.Logger;
 
 public class Practica14 {
-    private double[][] add(double[][] matrizA, double[][] matrizB) {
+    public double[][] add(double[][] matrizA, double[][] matrizB) {
         if (canAdd(matrizA, matrizB)) {
             Logger.error("Error las matrices no son cuadradas");
             return null;
@@ -23,7 +23,7 @@ public class Practica14 {
         return resultado;
     }
 
-    private double[][] subtract(double[][] matrizA, double[][] matrizB) {
+    public double[][] subtract(double[][] matrizA, double[][] matrizB) {
         if (canAdd(matrizA, matrizB)) {
             Logger.error("Error las matrices no son cuadradas");
             return null;
@@ -43,7 +43,7 @@ public class Practica14 {
         return resultado;
     }
 
-    private double[][] multiplyByScalar(double[][] matriz, int escalar) {
+    public double[][] multiplyByScalar(double[][] matriz, int escalar) {
         int filas = matriz.length;
         int columnas = matriz[0].length;
 
@@ -58,7 +58,7 @@ public class Practica14 {
         return resultado;
     }
 
-    private double[][] multiply(double[][] matrizA, double[][] matrizB) {
+    public double[][] multiply(double[][] matrizA, double[][] matrizB) {
         if (canMultiply(matrizA, matrizB)) {
             Logger.error("Error las matrices no se pueden multiplicar");
             return null;
@@ -80,7 +80,7 @@ public class Practica14 {
         return resultado;
     }
 
-    private double[][] transpose(double[][] matriz) {
+    public double[][] transpose(double[][] matriz) {
         int filas = matriz.length;
         int columnas = matriz[0].length;
 
@@ -137,34 +137,6 @@ public class Practica14 {
         return determinant;
     }
 
-    private double[][] getSubMatrix(double[][] matriz, int filaEliminar, int columnaEliminar) {
-        int size = matriz.length;
-        double[][] resultado = new double[size - 1][size - 1];
-
-        int filaResultado = 0;
-
-        for (int i = 0; i < size; i++) {
-            if (i == filaEliminar) {
-                continue;
-            }
-
-            int columnaResultado = 0;
-
-            for (int j = 0; j < size; j++) {
-                if (j == columnaEliminar) {
-                    continue;
-                }
-
-                resultado[filaResultado][columnaResultado] = matriz[i][j];
-                columnaResultado++;
-            }
-
-            filaResultado++;
-        }
-
-        return resultado;
-    }
-
     public double[][] adjugate(double[][] matriz) {
         if (!isSquare(matriz)) {
             throw new IllegalArgumentException("La matriz no es cuadrada");
@@ -204,6 +176,34 @@ public class Practica14 {
             for (int j = 0; j < size; j++) {
                 resultado[i][j] = adjugate[i][j] / determinant;
             }
+        }
+
+        return resultado;
+    }
+
+    private double[][] getSubMatrix(double[][] matriz, int filaEliminar, int columnaEliminar) {
+        int size = matriz.length;
+        double[][] resultado = new double[size - 1][size - 1];
+
+        int filaResultado = 0;
+
+        for (int i = 0; i < size; i++) {
+            if (i == filaEliminar) {
+                continue;
+            }
+
+            int columnaResultado = 0;
+
+            for (int j = 0; j < size; j++) {
+                if (j == columnaEliminar) {
+                    continue;
+                }
+
+                resultado[filaResultado][columnaResultado] = matriz[i][j];
+                columnaResultado++;
+            }
+
+            filaResultado++;
         }
 
         return resultado;
