@@ -18,6 +18,7 @@ import org.example.app.practicas.practica11.Practica11;
 import org.example.app.practicas.practica12.Practica12;
 import org.example.app.practicas.practica13.Practica13;
 import org.example.app.practicas.practica14.Practica14;
+import org.example.app.practicas.practica15.Practica15;
 
 import java.net.URISyntaxException;
 import java.util.Arrays;
@@ -37,7 +38,8 @@ public class Main {
 //        testPractica11();
 //        testPractica12();
 //        testPractica13();
-        testPractica14();
+//        testPractica14();
+        testPractica15();
     }
 
     static void testPractica01() {
@@ -165,5 +167,11 @@ public class Main {
         double[][] result = p.add(matrizA, matrizB);
         IO.println("Suma:");
         Arrays.stream(result).forEach(r -> IO.println(Arrays.toString(r)));
+    }
+
+    static void testPractica15() {
+        Practica15 p = new Practica15();
+        p.testVenta();
+        System.out.println();
     }
 }

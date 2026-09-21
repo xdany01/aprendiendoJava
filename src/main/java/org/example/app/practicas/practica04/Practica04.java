@@ -1,6 +1,5 @@
 package org.example.app.practicas.practica04;
 
-import java.util.InputMismatchException;
 import java.util.Scanner;
 
 public class Practica04 {

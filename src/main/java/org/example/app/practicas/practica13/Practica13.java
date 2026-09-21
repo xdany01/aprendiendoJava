@@ -3,7 +3,6 @@ package org.example.app.practicas.practica13;
 import org.example.app.helpful.ArrayHelpful;
 import org.example.app.helpful.Logger;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class Practica13 {
