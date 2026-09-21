@@ -19,6 +19,7 @@ import org.example.app.practicas.practica12.Practica12;
 import org.example.app.practicas.practica13.Practica13;
 import org.example.app.practicas.practica14.Practica14;
 import org.example.app.practicas.practica15.Practica15;
+import org.example.app.practicas.practica16.Practica16;
 
 import java.net.URISyntaxException;
 import java.util.Arrays;
@@ -39,7 +40,8 @@ public class Main {
 //        testPractica12();
 //        testPractica13();
 //        testPractica14();
-        testPractica15();
+//        testPractica15();
+        testPractica16();
     }
 
     static void testPractica01() {
@@ -173,5 +175,10 @@ public class Main {
         Practica15 p = new Practica15();
         p.testVenta();
         System.out.println();
+    }
+
+    static void testPractica16() {
+        Practica16 p = new Practica16();
+        p.useVarArg(1, 2, 3, 4, 5, 6, 7, 8, 9, 0);
     }
 }
