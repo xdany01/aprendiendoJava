@@ -20,6 +20,7 @@ import org.example.app.practicas.practica13.Practica13;
 import org.example.app.practicas.practica14.Practica14;
 import org.example.app.practicas.practica15.Practica15;
 import org.example.app.practicas.practica16.Practica16;
+import org.example.app.practicas.practica17.Practica17;
 
 import java.net.URISyntaxException;
 import java.util.Arrays;
@@ -41,7 +42,8 @@ public class Main {
 //        testPractica13();
 //        testPractica14();
 //        testPractica15();
-        testPractica16();
+//        testPractica16();
+        testPractica17();
     }
 
     static void testPractica01() {
@@ -180,5 +182,10 @@ public class Main {
     static void testPractica16() {
         Practica16 p = new Practica16();
         p.useVarArg(1, 2, 3, 4, 5, 6, 7, 8, 9, 0);
+    }
+
+    static void testPractica17() {
+        Practica17 p = new Practica17();
+        p.createFileV2("mi_archivo.txt");
     }
 }
